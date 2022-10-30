@@ -222,7 +222,6 @@ export function initializeIpcHandlers(window: BrowserWindow): void {
   });
 
   handle(IPC_OW_IS_CMP_REQUIRED, async () => {
-    // NOTE(twolf): Next version of the ow-electron will fix the types
     return await (app as any).overwolf.isCMPRequired();
   });
 
